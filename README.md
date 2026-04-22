@@ -54,11 +54,12 @@ HydroStream supports three built-in processing modes:
 **1. Directory Setup** Prepare your working directory with the raw data folder:
 
     Working Directory/
-    ├── RAW_DATA_FOLDER/
-    │   ├── 2000.csv
-    │   ├── 2001.csv
-    │   └── 2025.csv
-    └── List of tests kept and categories.xlsx (Optional)
+    └── RAW_DATA_FOLDER/
+        ├── 2000.csv
+        ├── 2001.csv
+        ├── ...
+        ├── 2025.csv
+        └── List of tests kept and categories.xlsx
 
 **2. Execution** Create a Jupyter Notebook in the same working directory as the `RAW_DATA_FOLDER` and run the function in the notebook:
 
