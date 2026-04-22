@@ -61,7 +61,7 @@ HydroStream supports three built-in processing modes:
         ├── 2025.csv
         └── List of tests kept and categories.xlsx
 
-**2. Execution** Create a Jupyter Notebook in the same directory as the `RAW_DATA_FOLDER` (which contains both the raw CSV files and the Excel categories file), then run:
+**2. Execution** Create a Jupyter Notebook or download `hydrostream.ipynb` in the same directory as the `RAW_DATA_FOLDER` (which contains both the raw CSV files and the Excel categories file), then run:
 
     # ============================================================================
     # USAGE
