@@ -5,7 +5,7 @@
   **EA Water Quality Archive Pipeline**
 
   ![Python](https://img.shields.io/badge/Python-%3E%3D3.9-blue)
-  ![Version](https://img.shields.io/badge/version-2.3.0-green)
+  ![Version](https://img.shields.io/badge/version-1.0.0-green)
   ![License](https://img.shields.io/badge/license-CC--BY--4.0-lightgrey)
 
   *Environment Agency (England) Open Water Quality Archive — Processor*
