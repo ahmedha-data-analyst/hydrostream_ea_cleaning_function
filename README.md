@@ -147,9 +147,5 @@ Rows are processed systematically. Removed rows are tracked for full auditabilit
 
 ## Output Dataset Schema
 
-| | | |
-| :--- | :--- | :--- |
-| `Sampling Point` | `result` | `outlier_flag` |
-| `Type` | `Unit` | `Category` *(optional)* |
-| `Date` | `Season` | `Latitude` |
-| `Test` | `SourceYear` | `Longitude` |
+**Columns:**
+Sampling Point · Type · Date · Test · result · Unit · Season · SourceYear · Latitude · Longitude · outlier_flag · Category *(optional)*
