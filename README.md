@@ -61,32 +61,50 @@ HydroStream supports three built-in processing modes:
         ├── 2025.csv
         └── List of tests kept and categories.xlsx
 
-**2. Execution** Create a Jupyter Notebook in the same working directory as the `RAW_DATA_FOLDER` and run the function in the notebook:
+**2. Execution** Create a Jupyter Notebook in the same directory as the `RAW_DATA_FOLDER` (which contains both the raw CSV files and the Excel categories file), then run:
 
     # ============================================================================
     # USAGE
     # ============================================================================
-     
+    
+    from pathlib import Path
+    
     if __name__ == "__main__":
- 
-    # ── SETTINGS (EDIT THESE) ─────────────────────────────────────────
-    RAW_DATA_FOLDER = "."          # <-- path to your CSV folder
-    MODE            = "full"       # <-- "full", "electrochemistry", or "contaminants"
-    # ──────────────────────────────────────────────────────────────────
- 
-    result = hydrostream(
-        input_dir          = RAW_DATA_FOLDER,
-        mode               = MODE,
-        categories_file    = None,   # auto-detected from input_dir
-        years              = range(2000, 2026),
-        chunksize          = 250_000,
-        min_test_count     = 50,
-        flag_outliers      = True,
-        generate_stats     = True,
-        generate_qa_report = True,
-        save_log           = True,
-    )
-
+    
+        # ── SETTINGS (EDIT THESE) ─────────────────────────────────────────
+        RAW_DATA_FOLDER = "./RAW_DATA_FOLDER"   # folder with CSVs + Excel file
+        MODE = "full"                           # "full", "electrochemistry", or "contaminants"
+        # ──────────────────────────────────────────────────────────────────
+    
+        result = hydrostream(
+            input_dir=RAW_DATA_FOLDER,
+            mode=MODE,
+            categories_file=None,   # auto-detected from input_dir
+            years=range(2000, 2026),
+            chunksize=250_000,
+            min_test_count=50,
+            flag_outliers=True,
+            generate_stats=True,
+            generate_qa_report=True,
+            save_log=True,
+        )
+    
+        print("\n" + "─" * 60)
+        print("QUICK SUMMARY")
+        print("─" * 60)
+        print(f"  Final rows : {result['final_rows']:,}")
+        print(f"  Output dir : {result['output_dir']}")
+    
+        print("\n  Rows removed per filter:")
+        for k, v in result["drop_counts"].items():
+            print(f"    {k:<28}: {v:>12,}")
+    
+        print("\n  Files created:")
+        for key in ["csv", "parquet", "statistics", "qa_report", "log"]:
+            if result.get(key):
+                print(f"    • {Path(result[key]).name}")
+    
+        print("─" * 60)
 **3. Results** After running the function, a new folder called `EA_processed_output/` will be created automatically in the same working directory containing your processed files.
 
 ---
