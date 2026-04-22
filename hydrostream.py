@@ -3,7 +3,7 @@
 HYDROSTREAM — WATER QUALITY ARCHIVE STREAMING PIPELINE
 ===============================================================================
 Title   : Environment Agency (England) Open Water Quality Archive — Processor
-Version : 2.3.0
+Version : 1.0.0
 Authors : Domanique Bridglalsingh, Ahmed Abdalla, Jia Hu, Geyong Min,
           Xiaohong Li, and Siwei Zheng
 Licence : CC-BY-4.0  (same licence as the underlying EA data)
