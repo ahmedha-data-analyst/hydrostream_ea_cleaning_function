@@ -23,6 +23,34 @@ The Environment Agency (EA) published annual CSV files of water-quality measurem
 HydroStream reads the raw yearly CSVs, applies **transparent and reproducible cleaning**, and produces a single **analysis-ready dataset** ready for analysis, modelling, and industrial use.
 
 ---
+## Repository Layout
+
+HydroStream is kept intentionally simple: the main code and support files live in the repository root, and the raw EA input files are packaged separately inside `RAW_DATA_FOLDER.zip`.[page:1]
+
+```text
+Repository Root/
+├── hydrostream.py
+├── hydrostream.ipynb
+├── README.md
+├── logo.png
+├── List of tests kept and categories.xlsx
+└── RAW_DATA_FOLDER.zip
+    └── RAW_DATA_FOLDER/
+        ├── 2000.csv
+        ├── 2001.csv
+        ├── ...
+        ├── 2025.csv
+        └── List of tests kept and categories.xlsx
+```
+
+### What this means
+
+- `hydrostream.py` contains the main HydroStream processing function.
+- `hydrostream.ipynb` provides an interactive notebook version for running the workflow.
+- `RAW_DATA_FOLDER.zip` packages the required raw input folder expected by the pipeline.
+- After extraction, `RAW_DATA_FOLDER/` should contain the annual EA CSV files from 2000 to 2025 plus `List of tests kept and categories.xlsx`.
+
+---
 
 ## Dependencies
 
