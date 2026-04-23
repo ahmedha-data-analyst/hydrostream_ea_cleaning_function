@@ -25,7 +25,7 @@ HydroStream reads the raw yearly CSVs, applies **transparent and reproducible cl
 ---
 ## Repository Layout
 
-HydroStream is kept intentionally simple: the main code and support files live in the repository root, and the raw EA input files are packaged separately inside `RAW_DATA_FOLDER.zip`.[page:1]
+HydroStream is kept intentionally simple: the main code and support files live in the repository root, and the raw EA input files are packaged separately inside `RAW_DATA_FOLDER.zip`.
 
 ```text
 Repository Root/
